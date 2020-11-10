@@ -1,4 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import TexButton from './components/button.vue'
+import './assets/fonts/font.less'
+const app = createApp(App)
 
-createApp(App).mount('#app')
+app.component(TexButton.name, TexButton)
+
+app.mount('#app')
