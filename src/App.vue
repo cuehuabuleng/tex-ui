@@ -1,4 +1,5 @@
 <template>
+  <h2>button</h2>
   <div class="row">
     <tex-button type="primary">删除</tex-button>
     <tex-button type="success">删除</tex-button>
@@ -43,17 +44,29 @@
     ></tex-button>
   </div>
 
-<!-- sync修饰符是一个语法糖 -->
-  <tex-button plain icon="tex-icon-delete" type="primary" @click="visible=true">显示</tex-button>
-  <tex-dialog title="温馨提示" width="50%" top="200px" v-model:visible.sync="visible">
+  <h2>dialog</h2>
+  <!-- sync修饰符是一个语法糖 -->
+  <tex-button
+    plain
+    icon="tex-icon-delete"
+    type="primary"
+    @click="visible = true"
+    >显示</tex-button
+  >
+  <tex-dialog
+    title="温馨提示"
+    width="50%"
+    top="200px"
+    v-model:visible.sync="visible"
+  >
     <ul>
       <li>1</li>
       <li>2</li>
       <li>3</li>
     </ul>
     <template v-slot:footer>
-      <tex-button type="primary"  @click="visible=false">取消</tex-button>
-      <tex-button @click="visible=false">确认</tex-button>
+      <tex-button type="primary" @click="visible = false">取消</tex-button>
+      <tex-button @click="visible = false">确认</tex-button>
     </template>
   </tex-dialog>
   <!-- <tex-dialog>
@@ -61,23 +74,41 @@
       <h1>我是标题</h1>
     </template>
   </tex-dialog> -->
-
+  <h2>input</h2>
   <tex-input v-model="modelValue" placeholder="value" clearable></tex-input>
-  <span>{{modelValue}}</span>
-  <tex-input placeholder="enterpassword" v-model="modelValue"  showPassword ></tex-input>
+  <span>{{ modelValue }}</span>
+  <tex-input
+    placeholder="enterpassword"
+    v-model="modelValue"
+    showPassword
+  ></tex-input>
 
+  <h2>switch</h2>
+  <tex-switch v-model:modleActive="modleActive"></tex-switch>
+  <tex-switch
+    v-model:modleActive="modleActive"
+    inactive-color="red"
+    active-color="green"
+    name='username'
+    @change="handleSwitch"
+  ></tex-switch>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      visible:false,
-      modelValue:'zhangsan'
+      visible: false,
+      modelValue: "zhangsan",
+      modleActive: false,
+    };
+  },
+  methods: {
+    handleSwitch(){
+      console.log('change')
     }
   },
-  methods: {},
-  watch: { },
+  watch: {},
 };
 </script>
 
