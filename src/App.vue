@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <tex-button type="primary" @click="fn">删除</tex-button>
+    <tex-button type="primary">删除</tex-button>
     <tex-button type="success">删除</tex-button>
     <tex-button type="info">删除</tex-button>
     <tex-button type="waring">删除</tex-button>
@@ -35,7 +35,6 @@
     <tex-button plain circle icon="tex-icon-delete" type="info"></tex-button>
     <tex-button plain circle icon="tex-icon-delete" type="waring"></tex-button>
     <tex-button
-      @click="fn"
       plain
       circle
       icon="tex-icon-delete"
@@ -62,22 +61,23 @@
       <h1>我是标题</h1>
     </template>
   </tex-dialog> -->
+
+  <tex-input v-model="modelValue" placeholder="value" clearable></tex-input>
+  <span>{{modelValue}}</span>
+  <tex-input placeholder="enterpassword" v-model="modelValue"  showPassword ></tex-input>
+
 </template>
 
 <script>
 export default {
   data() {
     return {
-      visible:false
+      visible:false,
+      modelValue:'zhangsan'
     }
   },
-  methods: {
-    fn(e) {
-      e.preventDefault();
-
-      console.log(1);
-    }
-  },
+  methods: {},
+  watch: { },
 };
 </script>
 
