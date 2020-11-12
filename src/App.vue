@@ -46,7 +46,7 @@
 
 <!-- sync修饰符是一个语法糖 -->
   <tex-button plain icon="tex-icon-delete" type="primary" @click="visible=true">显示</tex-button>
-  <tex-dialog title="温馨提示" width="50%" top="200px" :visible="visible" @close="close">
+  <tex-dialog title="温馨提示" width="50%" top="200px" v-model:visible.sync="visible">
     <ul>
       <li>1</li>
       <li>2</li>
@@ -76,9 +76,6 @@ export default {
       e.preventDefault();
 
       console.log(1);
-    },
-    close(){
-      this.visible = false
     }
   },
 };
