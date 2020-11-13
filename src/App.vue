@@ -89,9 +89,12 @@
     v-model:modleActive="modleActive"
     inactive-color="red"
     active-color="green"
-    name='username'
+    name="username"
     @change="handleSwitch"
   ></tex-switch>
+  <h2>radio</h2>
+  <tex-radio label="1" v-model:gender="gender"></tex-radio>
+  <tex-radio label="0" v-model:gender="gender"></tex-radio>
 </template>
 
 <script>
@@ -101,14 +104,19 @@ export default {
       visible: false,
       modelValue: "zhangsan",
       modleActive: false,
+      gender:'1'
     };
   },
   methods: {
-    handleSwitch(){
-      console.log('change')
+    handleSwitch() {
+      console.log("change");
+    },
+  },
+  watch: {
+    gender(){
+      console.log(this.gender)
     }
   },
-  watch: {},
 };
 </script>
 
