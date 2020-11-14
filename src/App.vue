@@ -101,6 +101,16 @@
     <tex-radio label="1"></tex-radio>
     <tex-radio label="0"></tex-radio>
   </tex-radiogroup>
+
+  <h2>checkbox</h2>
+  <tex-checkbox v-model:value="active"> 是否選中 </tex-checkbox>
+
+  <h2>checkbox-group</h2>
+  <tex-checkgroup v-model:value="hobby">
+    <tex-checkbox label="抽烟"></tex-checkbox>
+    <tex-checkbox label="喝酒"></tex-checkbox>
+    <tex-checkbox label="烫头"></tex-checkbox>
+  </tex-checkgroup>
 </template>
 
 <script>
@@ -111,6 +121,8 @@ export default {
       modelValue: "zhangsan",
       modleActive: false,
       value: "1",
+      active: true,
+      hobby:['抽烟', '喝酒','烫头']
     };
   },
   methods: {
@@ -122,6 +134,12 @@ export default {
     value() {
       console.log(this.value);
     },
+    active() {
+      console.log(this.active);
+    },
+    hobby(){
+      console.log('hobby', this.hobby)
+    }
   },
 };
 </script>

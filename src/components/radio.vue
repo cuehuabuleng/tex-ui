@@ -51,10 +51,7 @@ export default {
     isGroup() {
       return !!this.RadioGroup.value;
     },
-  },
-  mounted() {
-    console.log("RadioGroup", this.RadioGroup.value);
-  },
+  }
 };
 </script>
 <style lang="less" scoped>
