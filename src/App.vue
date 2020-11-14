@@ -93,8 +93,14 @@
     @change="handleSwitch"
   ></tex-switch>
   <h2>radio</h2>
-  <tex-radio label="1" v-model:gender="gender"></tex-radio>
-  <tex-radio label="0" v-model:gender="gender"></tex-radio>
+  <!-- <tex-radio label="1" v-model:value="value"></tex-radio>
+  <tex-radio label="0" v-model:value="value"></tex-radio> -->
+
+  <h2>radiogroup</h2>
+  <tex-radiogroup v-model:value="value">
+    <tex-radio label="1"></tex-radio>
+    <tex-radio label="0"></tex-radio>
+  </tex-radiogroup>
 </template>
 
 <script>
@@ -104,7 +110,7 @@ export default {
       visible: false,
       modelValue: "zhangsan",
       modleActive: false,
-      gender:'1'
+      value: "1",
     };
   },
   methods: {
@@ -113,9 +119,9 @@ export default {
     },
   },
   watch: {
-    gender(){
-      console.log(this.gender)
-    }
+    value() {
+      console.log(this.value);
+    },
   },
 };
 </script>

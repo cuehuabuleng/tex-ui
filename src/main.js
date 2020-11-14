@@ -5,6 +5,7 @@ import TexDialog from './components/dialog.vue'
 import TexInput from './components/input.vue'
 import TexSwitch from './components/switch.vue'
 import TexRadio from './components/radio.vue'
+import TexRadiogroup from './components/radio-group.vue'
 
 import './assets/fonts/font.less'
 const app = createApp(App)
@@ -14,6 +15,7 @@ app.component(TexDialog.name, TexDialog)
 app.component(TexInput.name, TexInput)
 app.component(TexSwitch.name, TexSwitch)
 app.component(TexRadio.name, TexRadio)
+app.component(TexRadiogroup.name, TexRadiogroup)
 
 
 app.mount('#app')

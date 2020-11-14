@@ -1,5 +1,5 @@
 <template>
-  <label class="tex-radio" :class="{'is-checked' : label === gender}">
+  <label class="tex-radio" :class="{ 'is-checked': label === modelValue }">
     <span class="tex-radio_input">
       <span class="tex-radio_inner"></span>
       <input
@@ -19,12 +19,17 @@
 <script>
 export default {
   name: "TexRadio",
+  inject: {
+    RadioGroup: {
+      default: "",
+    },
+  },
   props: {
     label: {
       type: [String, Number, Boolean],
       default: "",
     },
-    gender: {
+    value: {
       type: [String, Number, Boolean],
       default: "1",
     },
@@ -36,15 +41,19 @@ export default {
   computed: {
     modelValue: {
       get() {
-        return this.gender;
+        // 如果外面被group包裹，那就需要返回的是group的值value
+        return this.isGroup ? this.RadioGroup.value : this.value;
       },
       set(value) {
-          this.$emit('update:gender', value)
+        this.isGroup ? this.RadioGroup.$emit('update:value', value) : this.$emit('update:value', value)
       },
+    },
+    isGroup() {
+      return !!this.RadioGroup.value;
     },
   },
   mounted() {
-    console.log(this.gender);
+    console.log("RadioGroup", this.RadioGroup.value);
   },
 };
 </script>
