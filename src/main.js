@@ -8,6 +8,8 @@ import TexRadio from './components/radio.vue'
 import TexRadiogroup from './components/radio-group.vue'
 import TexCheckbox from './components/checkbox.vue'
 import TexCheckgroup from './components/checkbox-group.vue'
+import TexForm from './components/form.vue'
+import TexFormItem from './components/form-item.vue'
 
 import './assets/fonts/font.less'
 const app = createApp(App)
@@ -20,6 +22,8 @@ app.component(TexRadio.name, TexRadio)
 app.component(TexRadiogroup.name, TexRadiogroup)
 app.component(TexCheckbox.name, TexCheckbox)
 app.component(TexCheckgroup.name, TexCheckgroup)
+app.component(TexForm.name, TexForm)
+app.component(TexFormItem.name, TexFormItem)
 
 
 app.mount('#app')

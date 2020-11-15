@@ -69,11 +69,11 @@
       <tex-button @click="visible = false">确认</tex-button>
     </template>
   </tex-dialog>
-  <!-- <tex-dialog>
+  <tex-dialog>
     <template v-slot:title>
       <h1>我是标题</h1>
     </template>
-  </tex-dialog> -->
+  </tex-dialog>
   <h2>input</h2>
   <tex-input v-model="modelValue" placeholder="value" clearable></tex-input>
   <span>{{ modelValue }}</span>
@@ -93,8 +93,8 @@
     @change="handleSwitch"
   ></tex-switch>
   <h2>radio</h2>
-  <!-- <tex-radio label="1" v-model:value="value"></tex-radio>
-  <tex-radio label="0" v-model:value="value"></tex-radio> -->
+  <tex-radio label="1" v-model:value="value"></tex-radio>
+  <tex-radio label="0" v-model:value="value"></tex-radio>
 
   <h2>radiogroup</h2>
   <tex-radiogroup v-model:value="value">
@@ -111,6 +111,19 @@
     <tex-checkbox label="喝酒"></tex-checkbox>
     <tex-checkbox label="烫头"></tex-checkbox>
   </tex-checkgroup>
+
+  <h2>form</h2>
+  <tex-form :model="model" label-width="100px">
+    <tex-form-item label="用户名">
+      <tex-input
+        palceholder="请输入用户名"
+        v-model="model.username"
+      ></tex-input>
+    </tex-form-item>
+    <tex-form-item label="选择">
+      <tex-switch v-model:modleActive="model.active"></tex-switch>
+    </tex-form-item>
+  </tex-form>
 </template>
 
 <script>
@@ -122,7 +135,11 @@ export default {
       modleActive: false,
       value: "1",
       active: true,
-      hobby:['抽烟', '喝酒','烫头']
+      hobby: ["抽烟", "喝酒", "烫头"],
+      model: {
+        username: "",
+        active: true,
+      },
     };
   },
   methods: {
@@ -137,9 +154,9 @@ export default {
     active() {
       console.log(this.active);
     },
-    hobby(){
-      console.log('hobby', this.hobby)
-    }
+    hobby() {
+      console.log("hobby", this.hobby);
+    },
   },
 };
 </script>
