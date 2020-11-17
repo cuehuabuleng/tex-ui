@@ -92,7 +92,7 @@ export default {
       outline: none;
       cursor: pointer;
       font-size: 16px;
-      .el-icon-close {
+      .tex-icon-close {
         color: #909399;
       }
     }
