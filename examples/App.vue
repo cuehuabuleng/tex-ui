@@ -1,10 +1,10 @@
 <template>
   <h2>button</h2>
   <div class="row">
-    <tex-button type="primary">删除</tex-button>
+    <tex-button type="primary" @click="handleClik">删除</tex-button>
     <tex-button type="success">删除</tex-button>
     <tex-button type="info">删除</tex-button>
-    <tex-button type="waring">删除</tex-button>
+    <tex-button type="warning">删除</tex-button>
     <tex-button type="danger">删除</tex-button>
   </div>
   <div class="row">
@@ -57,7 +57,7 @@
     title="温馨提示"
     width="50%"
     top="200px"
-    v-model:visible.sync="visible"
+    v-model:visible="visible"
   >
     <ul>
       <li>1</li>
@@ -124,6 +124,7 @@
       <tex-switch v-model:modleActive="model.active"></tex-switch>
     </tex-form-item>
   </tex-form>
+
 </template>
 
 <script>
@@ -146,6 +147,9 @@ export default {
     handleSwitch() {
       console.log("change");
     },
+    handleClik(e){
+      console.log('1',e)
+    }
   },
   watch: {
     value() {

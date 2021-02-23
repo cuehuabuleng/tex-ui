@@ -57,7 +57,7 @@ export default {
   }
 };
 </script>
-<style lang="less" scoped>
+<style lang="stylus" scoped>
 .tex-button {
   display: inline-block;
   line-height: 1;

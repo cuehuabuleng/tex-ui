@@ -38,3 +38,6 @@ if(typeof window !== 'undefined' && window.Vue){
 export default {
     install
 }
+
+// 组件的按需引入
+// https://juejin.cn/post/6844904158181474311

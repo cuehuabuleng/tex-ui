@@ -11,6 +11,7 @@
       },
     ]"
     :disabled="disabled"
+    @click="handleClick"
   >
   <i v-if="icon" :class="icon"></i>
 

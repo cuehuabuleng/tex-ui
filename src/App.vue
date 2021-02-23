@@ -4,7 +4,7 @@
     <tex-button type="primary">删除</tex-button>
     <tex-button type="success">删除</tex-button>
     <tex-button type="info">删除</tex-button>
-    <tex-button type="waring">删除</tex-button>
+    <tex-button type="warning">警告</tex-button>
     <tex-button type="danger">删除</tex-button>
   </div>
   <div class="row">

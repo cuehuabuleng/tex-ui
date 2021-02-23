@@ -62,6 +62,14 @@ export default {
       type: String,
       default: "",
     },
+  },
+  watch:{
+    value(){
+      console.log('子组件', this.value)
+    }
+  },
+  mounted(){
+    console.log('子组件',this.value, this.label, this.name)
   }
 };
 </script>
