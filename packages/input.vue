@@ -58,9 +58,13 @@ export default {
   },
   methods: {
     handleInput(e) {
+      // 在输入的时候触发input事件，给外部监听
+      this.$emit("input", e.target.value);
       this.$emit("update:modelValue", e.target.value);
     },
     clear() {
+      // 在清空输入框的时候触发clear事件，给外部监听
+      this.$emit("clear", "");
       this.$emit("update:modelValue", "");
     },
     handlePassword() {

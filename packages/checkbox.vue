@@ -31,6 +31,10 @@ export default {
         return this.isGroup ? this.CheckboxGroup.value : this.value;
       },
       set(value) {
+        // 触发change事件，被外面监听
+        this.isGroup
+          ? this.CheckboxGroup.$emit("change", value)
+          : this.$emit("change", value);
         this.isGroup
           ? this.CheckboxGroup.$emit("update:value", value)
           : this.$emit("update:value", value);

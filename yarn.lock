@@ -7879,10 +7879,10 @@ terser@^4.1.2, terser@^4.6.12:
     source-map "~0.6.1"
     source-map-support "~0.5.12"
 
-tex-ui@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/tex-ui/-/tex-ui-0.1.0.tgz#465f6af1b77a04fb9dd9d550cfae13725b302adc"
-  integrity sha512-mUXPMhsGKOWB7c056PkjT/Y1JBe2G8YZYQ6xVqqSEVIgw3fDStzsFgTzSzF9jC1IAb3M5AT+pVHZKtVTa6B8+g==
+tex-ui@0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/tex-ui/-/tex-ui-0.1.4.tgz#f0d24cf4a5af047bc83c1bc3de4086b59c1e0937"
+  integrity sha512-J1sPHEsZz4BWWewlRDXH2yeZXcdNQBHW0HyfqyQG/qsrEoE62wCyADARg/zAMIwRz6S4hKcgPWXdx8mbLFjolQ==
   dependencies:
     core-js "^3.6.5"
     less "^3.12.2"

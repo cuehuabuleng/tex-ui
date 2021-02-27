@@ -18,7 +18,7 @@ export default {
       type: String,
     },
   },
-  inject: ["Form"],
+  inject: ["Form"]
 };
 </script>
 
