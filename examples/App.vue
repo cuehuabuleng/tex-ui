@@ -50,7 +50,7 @@
   <tex-button plain type="primary" @click="visible = true"
     >点击打开dialog</tex-button
   >
-  <tex-dialog
+  <!-- <tex-dialog
     title="输入账号"
     width="30%"
     top="200px"
@@ -76,7 +76,7 @@
       <tex-button type="primary" @click="visible = false">取消</tex-button>
       <tex-button @click="visible = false">确认</tex-button>
     </template>
-  </tex-dialog>
+  </tex-dialog> -->
   <h2>input</h2>
   <tex-input v-model="inputValue" placeholder="value" clearable></tex-input>
   <span>{{ inputValue }}</span>

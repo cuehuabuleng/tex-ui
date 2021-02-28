@@ -2,7 +2,7 @@
   <div class="tex-form-item">
     <label
       class="tex-form-item_label"
-      :style="{ width: this.Form.labelWidth }"
+      :style="{ width: Form.labelWidth }"
       >{{ label }}</label
     >
     <div class="tex-form-item_content">
@@ -13,12 +13,12 @@
 <script>
 export default {
   name: "TexFormItem",
+  inject: ["Form"],
   props: {
     label: {
       type: String,
     },
-  },
-  inject: ["Form"]
+  }
 };
 </script>
 
